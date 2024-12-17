@@ -17,6 +17,22 @@
         "type": "indirect"
       }
     },
+    "mdbook-treesitter-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733316589,
+        "narHash": "sha256-anryofkx1a2ZP0plBlUMDjdAQfSMczrAgd1C/WPiZgQ=",
+        "ref": "refs/heads/master",
+        "rev": "8289ba8072e97b0fd1070003a45be004392a72c5",
+        "revCount": 28,
+        "type": "git",
+        "url": "file:///home/brych/repos/mdbook-treesitter/"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/brych/repos/mdbook-treesitter/"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 0,
@@ -32,6 +48,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "mdbook-treesitter-src": "mdbook-treesitter-src",
         "nixpkgs": "nixpkgs",
         "systems": "systems_2"
       }

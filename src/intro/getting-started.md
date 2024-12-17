@@ -1,5 +1,7 @@
 # Getting Started
 
+<!-- Welcome to our documentation! We have <em>styling</em> and <button>buttons</button>! -->
+
 ```fram
 (* This example demonstrates the use of effect handlers 
   to implement a backtracking search for Pythagorean triples. *)

@@ -6,6 +6,7 @@ language = "en"
 [preprocessor.katex]
 after = ["links"]
 
-# [preprocessor.treesitter]
-# command = "mdbook-treesitter"
-# languages = ["fram"]
+[preprocessor.treesitter]
+command = "mdbook-treesitter"
+languages = ["fram"]
+

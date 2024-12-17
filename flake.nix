@@ -2,6 +2,16 @@
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     systems.url = "github:nix-systems/default";
+    mdbook-treesitter-src = {
+      url = "git+file:///home/brych/repos/mdbook-treesitter/";
+      flake = false;
+    };
+    # mdbook-tree-sitter-src = {
+    #   type = "github";
+    #   owner = "Corpauration";
+    #   repo = "mdbook-treesitter";
+    #   flake = false;
+    # };
   };
 
   outputs =
@@ -10,6 +20,7 @@
       nixpkgs,
       flake-utils,
       systems,
+      mdbook-treesitter-src,
     }:
     flake-utils.lib.eachSystem (import systems) (
       system:
@@ -18,13 +29,7 @@
         mdbook-treesitter = with pkgs; pkgs.rustPlatform.buildRustPackage rec {
           pname = "mdbook-treesitter";
           version = "1.0.0";
-          src = fetchFromGitHub {
-            owner = "Corpauration";
-            repo = pname;
-            rev = "b527e4aa69bf6ee2bbf509ecfc4c14aa889be1b8";
-            sha256 = "sha256-j581kaR4IjvpcxxFPlzTx97TNBsfVgyY+76h+OZcLBE=";
-          };
-
+          src = mdbook-treesitter-src;
           cargoHash = "sha256-X8NEuy/ebMfDHP2QjyB+2sPuffXZOEh+zQsB8RGBYZM=";
 
           meta = with stdenv.lib; {};
@@ -37,6 +42,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             mdbook-treesitter
+            mdbook-katex
             mdbook
           ];
         };
