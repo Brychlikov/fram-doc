@@ -20,10 +20,10 @@
     "mdbook-treesitter-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1733316589,
-        "narHash": "sha256-anryofkx1a2ZP0plBlUMDjdAQfSMczrAgd1C/WPiZgQ=",
+        "lastModified": 1740563758,
+        "narHash": "sha256-wuoXpeFK3drUICdpevf0mHcgoMoztIAGg6ATEx+2ExQ=",
         "ref": "refs/heads/master",
-        "rev": "8289ba8072e97b0fd1070003a45be004392a72c5",
+        "rev": "ca677c2a2f13ba13819184d84f5b55f257b80fdf",
         "revCount": 28,
         "type": "git",
         "url": "file:///home/brych/repos/mdbook-treesitter/"

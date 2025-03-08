@@ -30,7 +30,14 @@
           pname = "mdbook-treesitter";
           version = "1.0.0";
           src = mdbook-treesitter-src;
-          cargoHash = "sha256-X8NEuy/ebMfDHP2QjyB+2sPuffXZOEh+zQsB8RGBYZM=";
+          # cargoHash = "";
+          buildFeatures = [ "tree-sitter-fram" ];
+          cargoLock.lockFile = "${mdbook-treesitter-src}/Cargo.lock";
+          cargoLock.allowBuiltinFetchGit = true;
+          # cargoLock.outputHashes = {
+          #   "tree-sitter-fram-0.1.0" = "";
+          # };
+
 
           meta = with stdenv.lib; {};
 
