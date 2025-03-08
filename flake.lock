@@ -20,11 +20,11 @@
     "mdbook-treesitter-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1740563758,
-        "narHash": "sha256-wuoXpeFK3drUICdpevf0mHcgoMoztIAGg6ATEx+2ExQ=",
+        "lastModified": 1741433963,
+        "narHash": "sha256-H7h9TqKAhwPBE7ZMU0WOS81wrdMKVrJjGByYx/8Uwhg=",
         "owner": "Brychlikov",
         "repo": "mdbook-treesitter",
-        "rev": "ca677c2a2f13ba13819184d84f5b55f257b80fdf",
+        "rev": "5f94ee95b473fd76a6c396a41c6011e0ca10708c",
         "type": "github"
       },
       "original": {
