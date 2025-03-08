@@ -26,7 +26,7 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        mdbook-treesitter = with pkgs; pkgs.rustPlatform.buildRustPackage rec {
+        mdbook-treesitter = with pkgs; pkgs.rustPlatform.buildRustPackage {
           pname = "mdbook-treesitter";
           version = "1.0.0";
           src = mdbook-treesitter-src;
@@ -34,24 +34,30 @@
           buildFeatures = [ "tree-sitter-fram" ];
           cargoLock.lockFile = "${mdbook-treesitter-src}/Cargo.lock";
           cargoLock.allowBuiltinFetchGit = true;
-          # cargoLock.outputHashes = {
-          #   "tree-sitter-fram-0.1.0" = "";
-          # };
-
-
           meta = with stdenv.lib; {};
-
         };
-      in
-      {
-        packages = flake-utils.lib.flattenTree { inherit (pkgs) hello; };
-
-        devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
+        deps = with pkgs; [
             mdbook-treesitter
             mdbook-katex
             mdbook
-          ];
+        ];
+      in
+
+      {
+        packages = flake-utils.lib.flattenTree { 
+          default = pkgs.stdenv.mkDerivation {
+            pname = "fram-doc";
+            version = "0.1.0";
+            buildInputs = deps;
+            src = ./.;
+            buildPhase = ''
+              mdbook build -d $out
+            '';
+          };
+        };
+
+        devShells.default = pkgs.mkShell {
+          buildInputs = deps;
         };
       }
     );
