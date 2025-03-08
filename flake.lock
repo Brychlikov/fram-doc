@@ -22,15 +22,15 @@
       "locked": {
         "lastModified": 1740563758,
         "narHash": "sha256-wuoXpeFK3drUICdpevf0mHcgoMoztIAGg6ATEx+2ExQ=",
-        "ref": "refs/heads/master",
+        "owner": "Brychlikov",
+        "repo": "mdbook-treesitter",
         "rev": "ca677c2a2f13ba13819184d84f5b55f257b80fdf",
-        "revCount": 28,
-        "type": "git",
-        "url": "file:///home/brych/repos/mdbook-treesitter/"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/brych/repos/mdbook-treesitter/"
+        "owner": "Brychlikov",
+        "repo": "mdbook-treesitter",
+        "type": "github"
       }
     },
     "nixpkgs": {

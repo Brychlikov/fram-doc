@@ -3,7 +3,7 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     systems.url = "github:nix-systems/default";
     mdbook-treesitter-src = {
-      url = "git+file:///home/brych/repos/mdbook-treesitter/";
+      url = "github:Brychlikov/mdbook-treesitter";
       flake = false;
     };
     # mdbook-tree-sitter-src = {
